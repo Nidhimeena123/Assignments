@@ -1,0 +1,80 @@
+@media screen and (max-width: 414px){
+    .nav-links ul{
+        display: none ;
+    }
+    .login ul{
+        visibility: hidden;
+    }
+
+    .manage-heading-para h1 {
+        width: 300px;
+    }
+    .manage-heading-para p{
+        width: 300px;
+        font-size: 16px;
+    }
+    .input-text-button input{
+        display: block;
+        margin: 0 auto;
+        font-size: 16px;
+        padding: 15px 50px;
+        border-radius: 5px;
+    }
+    .input-text-button button{
+        display: block;
+        margin: 0 auto;
+        font-size: 16px;
+        padding: 15px 115px;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+
+    .graph img{
+        height: 300px;
+    }
+
+    .timeline{
+        height: 800px;
+        display: block;
+        margin: 0 auto;
+    }
+    .timeline-img img{
+        margin-left: 20px;
+    }
+    .tips-heading{
+      margin-top: 20px;
+      width: 415px;
+      text-align: center;
+    }
+    .tips-heading h1{
+        font-size: 18px;
+    }
+    .tips-heading p{
+        margin: 0 25px;
+        font-size: 16px;
+    }
+
+    .work-container{
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .hours{
+        display: block;
+        padding: 0;
+        text-align: center;
+    }
+    .hours-heading h3{
+        width: 300px;
+    }
+    .hours-heading button{
+        padding: 15px 100px;
+        border-radius: 5px;
+    }
+
+    .hours-img img{
+        display: none;
+    }
+
+
+}

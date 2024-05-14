@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .grid {
+            background-color: black;
+            height: 815px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+
+        .grid-img {
+            width: 87%;
+            height: inherit;
+        }
+
+        .row-1 {
+            display: grid;
+            grid-template-columns: auto auto ;
+            column-gap: 10px;
+        }
+        .img-1{
+            height: inherit;
+            width: 485px;
+        }
+        .img-1 img{
+            height: 200px;
+            width: 710px ;
+        }
+
+        .img-2{
+            height: inherit;
+            width: 0px;
+        }
+        
+        .img-2 img{
+            height: 200px;
+            width: 300px;
+        }
+
+        .row-2 {
+            display: grid;
+            grid-template-columns: auto auto auto ;
+            column-gap: 10px;
+        }
+        .img-3 img{
+            height: 200px;
+            width: 250px;
+        }
+        
+        .img-4 img{
+            height: 200px;
+            width: 500px;
+        }
+        
+        .img-5 img{
+            height: 200px;
+            width: 250px;
+        }
+
+        .row-3 {
+            display: grid;
+            grid-template-columns: auto auto ;
+            column-gap: 10px;
+        }
+        .img-6 img{
+            height: 200px;
+            width: 505px;
+        }
+        
+        .img-7 img{
+            height: 200px;
+            width: 505px;
+        }
+
+        .row-4 {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            column-gap: 10px;
+        }
+        .img-8 img{
+            height: 200px;
+            width: 330px;
+        }
+        
+        .img-9 img{
+            height: 200px;
+            width: 330px;
+        }
+        
+        .img-10 img{
+            height: 200px;
+            width: 330px;
+        }
+
+        /* SIDE CONTAINER */
+        .grid-side{
+            height: 500px;
+            width: 100%;
+        }
+
+        .content{
+            float: right;
+        }
+
+        .logo{
+            padding: 30px 12px 12px 0;
+            font-weight: bold;
+            font-size: 25px;
+            color: white;
+        }
+        
+        .links a{
+            float: right;
+        }
+        .links ul li{
+            padding: 25px 20px 20px 12px;
+        }
+        .links a{
+            color: white;
+        }
+        .icon-links{
+            padding-top: 50px;
+            float: right;
+        }
+        .icon-links i{
+            color: white;
+            padding-right: 25px;
+        }
+    </style>
+    </body>
+    <div class="grid">
+
+        <div class="grid-img">
+            <div class="row-1">
+                <div class="img-1"><img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" ></div>
+                <div class="img-2"><img src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""></div>
+            </div>
+            <div class="row-2">
+                <div class="img-3"><img src="https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w=" alt="">
+                </div>
+                <div class="img-4"><img src="https://media.istockphoto.com/id/1283504873/photo/mosque-and-bosphorus-bridge.jpg?s=612x612&w=0&k=20&c=UHyYLC4VVJef9V8vzdJsVwqSjX3N06D2-975j3VoajY=" alt="">
+                </div>
+                <div class="img-5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpgc_cKbN9Pv3B1jqcGn9xsfemr8GqTzf0-zSf857C6g&s" alt="">
+                </div>
+            </div>
+            <div class="row-3">
+                <div class="img-6"><img src="https://media.istockphoto.com/id/1317323736/photo/a-view-up-into-the-trees-direction-sky.jpg?s=612x612&w=0&k=20&c=i4HYO7xhao7CkGy7Zc_8XSNX_iqG0vAwNsrH1ERmw2Q=" alt="">
+                </div>
+                <div class="img-7"><img src="https://www.gettyimages.com/gi-resources/images/500px/983703508.jpg" alt="">
+                </div>
+            </div>
+            <div class="row-4">
+                <div class="img-8"><img src="https://cdn.pixabay.com/photo/2015/01/15/16/17/hands-600497_640.jpg" alt="">
+                </div>
+                <div class="img-9"><img src="https://www.w3schools.com/css/img_5terre_wide.jpg" alt="">
+                </div>
+                <div class="img-10"><img src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-side">
+            <div class="content">
+            <div class="logo">SHUTTER</div>
+            <div class="links">
+                <ul>
+                    <li><a href="#" style="color: red;">HOME</a></li>
+                    <li><a href="#">PHOTOS</a></li>
+                    <li><a href="#">BIO</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="icon-links">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</html>

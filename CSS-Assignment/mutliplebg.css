@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header{
+  height: 480px;
+  display: flex;
+}
+.bg-color{
+    width: 50%;
+    background-color: black;
+}
+.bg-image{
+    width: 50%;
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/030/467/869/small_2x/3d-tablet-displays-virtual-growth-arrow-on-digital-background-with-financial-data-vertical-mobile-wallpaper-ai-generated-free-photo.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.services{
+    color: white;
+    align-items: center;
+    margin: 70px 0;
+}
+
+.heading{
+    color: white;
+    font-size: 10px;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.heading div{
+    height: 20px;
+    width: 3px;
+    background-color: red;
+    margin: 2px 50px 0 20px;
+}
+
+.topic{
+    color: red;
+    font-size: 7px;
+}
