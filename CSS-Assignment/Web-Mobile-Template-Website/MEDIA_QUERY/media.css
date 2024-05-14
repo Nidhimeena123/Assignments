@@ -58,6 +58,9 @@
         grid-template-columns: auto;
         text-align: center;
     }
+    .work-content img{
+        height: 50px;
+    }
 
     .hours{
         display: block;
@@ -73,6 +76,38 @@
     }
 
     .hours-img img{
+        display: none;
+    }
+
+    .employees{
+        height: 250px;
+        width: 100%;
+        border-radius: 0;
+        display: block;
+    }
+    .employess-heading{
+        width: 90%;
+        margin: auto;
+        font-size: 14px;
+        padding-top: 15px;
+    }
+    .employees-img{
+        margin: auto auto ;
+        width: 45%;
+        display: block;
+    }
+    .employees-img img{
+        height: 60px;
+        padding-top: 10px;
+    }
+    .footer{
+        height: 520px;
+    }
+    .footer-container{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .social img{
         display: none;
     }
 

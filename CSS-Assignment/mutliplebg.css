@@ -28,20 +28,32 @@
 
 .heading{
     color: white;
-    font-size: 10px;
+    font-size: 15px;
     letter-spacing: 2px;
     display: flex;
     justify-content: flex-end;
 }
 
 .heading div{
-    height: 20px;
+    height: 28px;
     width: 3px;
     background-color: red;
     margin: 2px 50px 0 20px;
 }
+.servies-content{
+    margin: 50px 50px;
+}
 
 .topic{
     color: red;
-    font-size: 7px;
+    font-size: 12px;
+    text-align: right;
+}
+.topic h2{
+    margin-bottom: 7px;
+}
+.servies-content p{
+    text-align: right;
+    font-size: 10px;
+    margin-bottom: 30px;
 }
