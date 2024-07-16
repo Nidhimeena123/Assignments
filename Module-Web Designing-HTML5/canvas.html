@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas">
+        Your browser does not support the canvas tag.
+    </canvas>
+
+    <canvas id="myCanvas2">
+        Your browser does not support the canvas tag.
+    </canvas>
+
+    <canvas id="myCanvas3">
+        Your browser does not support the canvas tag.
+    </canvas>
+    
+        <script>
+        let canvas = document.getElementById("myCanvas");
+        let ctx = canvas.getContext("2d");
+
+        let grd = ctx.createRadialGradient(5, 0, 0, 50, 30, 100);
+        grd.addColorStop(1, "red");
+        grd.addColorStop(0, "yellow");
+
+
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 200, 100);
+
+
+        // Circle
+        let canvas2 = document.getElementById("myCanvas2").getContext('2d');
+        
+        let grd2 = canvas2.createRadialGradient(5, 0, 0, 50, 30, 100);
+        grd2.addColorStop(1, "red");
+        grd2.addColorStop(0, "blue");
+
+        
+
+        canvas2.fillStyle = grd2;
+        canvas2.arc(95, 60, 60, 0, 2 * Math.PI);
+        canvas2.fill();
+
+        // Square
+        let canvas3 = document.getElementById("myCanvas3").getContext('2d');
+        canvas3.fillStyle="orange";
+        canvas3.rect(10, 10, 150, 150);
+        canvas3.fill();
+        
+        
+
+        </script>
+</body>
+</html>
