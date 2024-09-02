@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Finding Maximum number among 3 number using ternary operator
+        function findLargest(num1, num2, num3) {
+            return num1 >= num2 && num1 >= num3 ? num1
+                : num2 >= num1 && num2 >= num3 ? num2
+                    : num3;
+        }
+
+        const largestNumber = findLargest(10, 15, 8);
+        console.log("Largest number:", largestNumber);
+
+    </script>
+</body>
+
+</html>

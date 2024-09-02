@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const itemsArray = [
+            { 
+                itemId: 1, 
+                itemRef: "Item 001" 
+            },
+            { 
+                itemId: 2, 
+                itemRef: "Item 002" 
+            },
+            { 
+                itemId: 3, 
+                itemRef: "Item 003"
+             }
+        ];
+
+        const csvString = [
+            [
+                "Item ID",
+                "Item Reference"
+            ],
+            ...itemsArray.map(item => [
+                item.itemId,
+                item.itemRef
+            ])
+        ]
+            .map(e => e.join(","))
+            .join("\n");
+
+        console.log(csvString);
+    </script>
+</body>
+
+</html>

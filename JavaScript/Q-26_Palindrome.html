@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Checking Palindrome
+        // let i = 1;
+        // let user;
+        // while(i <= 3){
+        //      user = prompt('Enter the number of your choice');
+        //     i++;
+        // }
+
+        let a = 47674, sum = 0, b, z = a
+        while (a > 0) {
+            b = a % 10
+            sum = sum * 10 + b
+            a = parseInt(a / 10)
+        }
+        console.log(sum)
+        if (z == sum) {
+            console.log("palindrome number", sum)
+        }
+        else {
+            console.log("not a palindrome number", sum)
+        }
+    </script>
+</body>
+
+</html>

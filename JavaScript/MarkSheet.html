@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            text-align: center;
+            line-height: 40px;
+        }
+        .heading{
+            font-size: 25px;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+
+        .heading2{
+            font-size: 20px;
+        }
+        
+        .subjects{
+            font-size: 20px;
+        }
+        .subj input{
+            margin: 0 40px;
+        }
+
+        button{
+            margin: 15px;
+            padding: 8px 20px;
+            font-size: 15px;
+        }
+        .total {
+             font-size: 20px;
+        }
+
+        .total input{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="heading">Marksheet For Information Technology</div>
+
+    <div class="heading2">Enter Marks</div>
+
+    <div class="subjects">
+    <div class="subj">
+        <label for="">1.C language</label>
+        <input id="subj1" type="text">
+    </div>
+
+    <div class="subj">
+        <label for="">2.C++ lang </label>
+        <input id="subj2"  type="text">
+    </div>
+
+    <div class="subj">
+        <label for="">3.DataBase</label>
+        <input id="subj3"  type="text">
+    </div>
+
+    <div class="subj">
+        <label for="">4.HTML</label>
+        <input id="subj4"  type="text">
+    </div>
+
+    <div class="subj">
+        <label for="">5.CSS</label>
+        <input id="subj5"  type="text">
+    </div>
+
+    <div class="subj">
+        <label for="">6.Php</label>
+        <input id="subj6"  type="text">
+    </div>
+
+    <div class="subj">
+        <label for="">7.Core Java</label>
+        <input id="subj7"  type="text">
+    </div>
+    </div>
+
+    <div class="button">
+        <button id="result">Result</button>
+    </div>
+
+    <div class="total">
+        <label for="">Total out of 350 is  :</label> <input id="total" type="text">
+        <label for="">Percentage is : </label> <input id="percentage" type="text">
+
+    </div>
+    </div>
+    
+
+
+    <!-- Script -->
+     <script type="text/javascript">
+
+        let a = document.getElementById("subj1");
+        let b = document.getElementById("subj2");
+        let c = document.getElementById("subj3");
+        let d = document.getElementById("subj4");
+        let e = document.getElementById("subj5");
+        let f = document.getElementById("subj6");
+        let g = document.getElementById("subj7");
+
+        let total = document.getElementById("total");
+        let per = document.getElementById("percentage");
+
+        document.getElementById("result").addEventListener("click", function() {
+                total.value = parseInt(subj1.value) + parseInt(subj2.value) + parseInt(subj3.value) + parseInt(subj4.value) + parseInt(subj5.value) + parseInt(subj6.value) + parseInt(subj7.value);
+            });
+
+
+            document.getElementById("result").addEventListener("click", function() {
+                per.value = Math.round(parseInt(total.value) / 350  * 100) ;
+            });
+
+     </script>
+</body>
+</html>

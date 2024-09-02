@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+       }
+
+       .container{
+        text-align: center;
+        line-height: 50px;
+       }
+
+       .heading{
+        font-size: 25px;
+        font-weight: bold;
+       }
+
+       .firstnumber input{
+        margin: 0 25px;
+        padding: 10px;
+       }
+       .firstnumber label{
+        font-size: 18px;
+       }
+
+       .secondnumber input{
+        margin: 0 20px;
+        padding: 10px;
+       }
+       .secondnumber label{
+        font-size: 17px;
+       }
+
+       .buttons button{
+         padding: 8px 18px;
+         font-size: 20px;
+         margin-top: 15px;
+         margin-right: 12px;
+       }
+
+       .ans{
+        font-size: 24px;
+        margin: 10px 0;
+       }
+       .ans input{
+        border: none;
+        font-size: 20px;
+       }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <div class="heading">Math Operations</div>
+    <div class="input">
+        <div class="firstnumber">
+            <label for="">Enter First Number  : </label> <input id="firstNumber" type="text">
+        </div>
+        <div class="secondnumber">
+            <label for="">Enter Second Number : </label> <input id="secondNumber" type="text">
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button id="Addition">+</button>
+        <button id="Subtraction">-</button>
+        <button id="Multiplication">*</button>
+        <button id="Division">/</button>
+        <button id="Modulo">%</button>
+    </div>
+
+    <div class="ans" >Answer is : <input type="text" name="" id="answer"></div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script type="text/javascript">
+            let number1 = document.getElementById("firstNumber");
+            let number2 = document.getElementById("secondNumber");
+            let ans = document.getElementById("answer");
+
+            document.getElementById("Addition").addEventListener("click", function() {
+                ans.value = parseInt(firstNumber.value) + parseInt(secondNumber.value);
+            });
+
+            document.getElementById("Subtraction").addEventListener("click", function() {
+                ans.value = parseInt(firstNumber.value) - parseInt(secondNumber.value);
+            });
+
+            document.getElementById("Multiplication").addEventListener("click", function() {
+                ans.value = parseInt(firstNumber.value) * parseInt(secondNumber.value);
+            });
+
+            document.getElementById("Division").addEventListener("click", function() {
+                ans.value = parseInt(firstNumber.value) / parseInt(secondNumber.value);
+            });
+
+            document.getElementById("Modulo").addEventListener("click", function() {
+                ans.value = parseInt(firstNumber.value) % parseInt(secondNumber.value);
+            });
+    </script>
+</body>
+
+</html>
