@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
+
+    <style>
+        .main{
+            height: 400px;
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="https://www.travelandleisure.com/thmb/KTIha5CLifSoUD3gx0YP51xc3rY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/blue0517-4dfc85cb0200460ab717b101ac07888f.jpg" class="img" height="100%" width="100%" alt="">
+        <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/generic_asset/asset/09fd738c9d58a68b67a6fd6d563f5929-1650455871125/yellow%20color-min.jpg" class="img" height="100%" width="100%" alt="">
+        <img src="https://t4.ftcdn.net/jpg/04/12/23/25/360_F_412232546_w9iGUiUEO90wILLmbGuFZrM7K6GRijMU.jpg" class="img" height="100%" width="100%" alt="">
+        <img src="https://www.colorpalettestore.com/cdn/shop/products/E8DDD8_800x.png?v=1614624762" class="img" height="100%" width="100%" alt="">
+    </div>
+
+    
+    
+    <script>
+        var img_tag = document.getElementsByClassName("img");
+        // var img_tag1 = document.querySelectorAll(".img")
+        // console.log(img_tag1)
+        console.log(img_tag)
+
+
+        index = 0 
+        function slider(){
+            for(i=0;i<img_tag.length;i++){
+                img_tag[i].style.display = "none"
+            }
+
+            img_tag[index].style.display = "block"
+            index++;
+
+            // 4 index 0
+            if(index == 4){
+                index = 0;
+            }
+
+            setTimeout(slider,1000)
+
+        }
+        slider()
+    </script>
+</body>
+</html>
+</body>
+
+</html>
