@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Logout Example</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+            background-color: rebeccapurple;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 260px;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #authForm {
+            line-height: 60px;
+        }
+
+        input {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            width: 80%;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid rgb(137, 137, 137);
+        }
+
+        button {
+            width: 100px;
+            border: none;
+            background-color: green;
+            color: #fff;
+            font-size: 20px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        #logoutBtn{
+            width: 100px;
+            border: none;
+            background-color: red;
+            color: #fff;
+            font-size: 20px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        #welcome{
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="authForm">
+            <h1>Login</h1>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="loginBtn">Login</button>
+        </div>
+        <div id="welcome" style="display:none;">
+            <h2>Welcome,
+                <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, accusantium?
+                <span id="user"></span>!
+            </h2>
+            <button id="logoutBtn">Logout</button>
+        </div>
+    </div>
+
+
+
+    <!-- SCRIPT -->
+    <script>
+        const loginBtn = document.getElementById('loginBtn');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const welcomeDiv = document.getElementById('welcome');
+        const authForm = document.getElementById('authForm');
+        const userSpan = document.getElementById('user');
+
+        //  user data
+        const dummyUser = {
+            username: 'user',
+            password: 'pass'
+        };
+
+        // Check if user is already logged in
+        if (localStorage.getItem('loggedInUser')) {
+            showWelcome();
+        }
+
+        loginBtn.addEventListener('click', () => {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple validation
+            if (username === dummyUser.username && password === dummyUser.password) {
+                localStorage.setItem('loggedInUser', username);
+                showWelcome();
+            } else {
+                alert('Invalid! Please try again.');
+            }
+        });
+
+        logoutBtn.addEventListener('click', () => {
+            localStorage.removeItem('loggedInUser');
+            authForm.style.display = 'block';
+            welcomeDiv.style.display = 'none';
+        });
+
+        function showWelcome() {
+            const loggedInUser = localStorage.getItem('loggedInUser');
+            userSpan.textContent = loggedInUser;
+            authForm.style.display = 'none';
+            welcomeDiv.style.display = 'block';
+        }
+
+    </script>
+</body>
+
+</html>

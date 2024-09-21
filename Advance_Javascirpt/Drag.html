@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- STYLE -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        #left{
+            width: 300px;
+            border: 1px dotted black;
+        }
+        #right{
+            width: 300px;
+            border: 1px dotted black;
+        }
+
+        .list{
+            display: inline-block;
+            width: 50%;
+            text-align: center;
+            background-color: rgb(65, 114, 219);
+            color: white;
+            margin: 20px 5px;
+            padding: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Container -->
+        <div id="left">
+            <div class="list" draggable="true">Drag me 1</div>
+            <div class="list" draggable="true">Drag me 2</div>
+            <div class="list" draggable="true">Drag me 3</div>
+        </div>
+
+         <!--Right Container  -->
+        <div id="right"></div>
+    </div>
+    
+
+    <!-- SCRIPT -->
+    <script>
+        let listItems = document.getElementsByClassName("list");
+        let rightContainer = document.getElementById("right");
+        let leftContainer = document.getElementById("left");
+        
+
+        for(list of listItems){
+            list.addEventListener("dragstart", function(e){
+                let selected = e.target;
+
+                rightContainer.addEventListener("dragover", function(e){
+                    e.preventDefault();
+                });
+
+                rightContainer.addEventListener("drop", function(e){
+                    rightContainer.appendChild(selected);
+                    selected = null;
+                });
+
+                leftContainer.addEventListener("dragover", function(e){
+                    e.preventDefault();
+                });
+
+                leftContainer.addEventListener("drop", function(e){
+                    leftContainer.appendChild(selected);
+                    selected = null;
+                });
+            })
+        }
+
+
+    </script>
+</body>
+</html>

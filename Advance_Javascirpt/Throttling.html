@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="display"></div>
+    <h1>Mouse Coordinates</h1>
+
+    <script>
+        const display = document.getElementById('display');
+
+        function throttle(func, limit) {
+            let lastFunc;
+            let lastRan;
+
+            return function (...args) {
+                if (!lastRan) {
+                    func.apply(this, args);
+                    lastRan = Date.now();
+                } else {
+                    clearTimeout(lastFunc);
+                    lastFunc = setTimeout(() => {
+                        if ((Date.now() - lastRan) >= limit) {
+                            func.apply(this, args);
+                            lastRan = Date.now();
+                        }
+                    }, limit - (Date.now() - lastRan));
+                }
+            };
+        }
+
+        function showCoordinates(event) {
+            const x = event.clientX;
+            const y = event.clientY;
+            display.style.left = `${x + 10}px`;
+            display.style.top = `${y + 10}px`;
+            display.textContent = ` ${x}, ${y}`;
+        }
+
+        document.addEventListener('mousemove', throttle(showCoordinates, 100)); 
+
+    </script>
+</body>
+
+</html>
