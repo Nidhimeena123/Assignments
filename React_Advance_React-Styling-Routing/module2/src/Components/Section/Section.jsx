@@ -9,11 +9,6 @@ import snack from '../../assests/images/cat-3.png'
 import plum from '../../assests/images/cat-4.png'
 
 
-
-
-
-
-
 function Section() {
   return (
     <>
