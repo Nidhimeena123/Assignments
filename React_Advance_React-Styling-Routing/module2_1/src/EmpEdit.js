@@ -32,7 +32,7 @@ const EmpEdit = () => {
 
     const handlesubmit=(e)=>{
       e.preventDefault();
-      const empdata={id,name,email,phone,active};
+      const empdata={id,name,email};
       
 
       fetch("http://localhost:8000/employee/"+empid,{

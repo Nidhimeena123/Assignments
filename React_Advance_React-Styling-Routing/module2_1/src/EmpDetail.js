@@ -34,7 +34,6 @@ const EmpDetail = () => {
                         <h2>The Employee name is : <b>{empdata.name}</b>  ({empdata.id})</h2>
                         <h3>Contact Details</h3>
                         <h5>Email is : {empdata.email}</h5>
-                        <h5>Phone is : {empdata.phone}</h5>
                         <Link className="btn btn-danger" to="/">Back to Listing</Link>
                     </div>
                 }

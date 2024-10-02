@@ -15,7 +15,7 @@ const EmpCreate = () => {
 
     const handlesubmit=(e)=>{
       e.preventDefault();
-      const empdata={name,email,phone,active};
+      const empdata={name,email};
       
 
       fetch("http://localhost:8000/employee",{
@@ -68,20 +68,6 @@ const EmpCreate = () => {
                                         </div>
                                     </div>
 
-                                    <div className="col-lg-12">
-                                        <div className="form-group">
-                                            <label>Phone</label>
-                                            <input value={phone} onChange={e=>phonechange(e.target.value)} className="form-control"></input>
-                                        </div>
-                                    </div>
-
-                                    <div className="col-lg-12">
-                                        <div className="form-check">
-                                        <input checked={active} onChange={e=>activechange(e.target.checked)} type="checkbox" className="form-check-input"></input>
-                                            <label  className="form-check-label">Is Active</label>
-                                            
-                                        </div>
-                                    </div>
                                     <div className="col-lg-12">
                                         <div className="form-group">
                                            <button className="btn btn-success" type="submit">Save</button>
